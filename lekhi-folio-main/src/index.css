@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system for modern portfolio - Blues and whites theme */
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 100%;
+    --foreground: 213 31% 19%;
+
+    /* Card colors */
+    --card: 0 0% 100%;
+    --card-foreground: 213 31% 19%;
+
+    /* Popover colors */
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 31% 19%;
+
+    /* Primary - Professional Blue */
+    --primary: 214 88% 57%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 214 88% 70%;
+    --primary-dark: 214 88% 45%;
+
+    /* Secondary - Light Blue */
+    --secondary: 213 32% 95%;
+    --secondary-foreground: 213 31% 19%;
+
+    /* Muted colors */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 20% 55%;
+
+    /* Accent - Vibrant Blue */
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders and inputs */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 214 88% 57%;
+
+    /* Border radius */
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-skill: linear-gradient(135deg, hsl(var(--primary-light)) 0%, hsl(var(--primary)) 100%);
+    
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px hsl(var(--primary) / 0.1), 0 2px 4px -1px hsl(var(--primary) / 0.06);
+    --shadow-hover: 0 10px 15px -3px hsl(var(--primary) / 0.1), 0 4px 6px -2px hsl(var(--primary) / 0.05);
+    --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.05), 0 1px 3px hsl(var(--primary) / 0.1);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Base colors for dark mode */
+    --background: 213 31% 8%;
+    --foreground: 0 0% 95%;
+
+    /* Card colors for dark mode */
+    --card: 213 31% 10%;
+    --card-foreground: 0 0% 95%;
+
+    /* Primary - Keep blue vibrant in dark */
+    --primary: 214 88% 65%;
+    --primary-foreground: 213 31% 8%;
+    --primary-light: 214 88% 75%;
+    --primary-dark: 214 88% 55%;
+
+    /* Secondary for dark */
+    --secondary: 213 31% 15%;
+    --secondary-foreground: 0 0% 90%;
+
+    /* Muted for dark */
+    --muted: 213 31% 12%;
+    --muted-foreground: 215 20% 70%;
+
+    /* Accent for dark */
+    --accent: 217 91% 70%;
+    --accent-foreground: 213 31% 8%;
+
+    /* Updated gradients for dark */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-skill: linear-gradient(135deg, hsl(var(--primary-light)) 0%, hsl(var(--primary)) 100%);
+  }
+}
+
+/* Custom utility classes */
+@layer components {
+  /* Hero section styles */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  /* Card styles */
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .card-shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
+  
+  /* Skill card styles */
+  .skill-gradient {
+    background: var(--gradient-skill);
+  }
+  
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+  
+  /* Glowing border effect */
+  .glow-border {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
